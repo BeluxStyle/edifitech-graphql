@@ -1,0 +1,17 @@
+{
+    "name": "edifitech-graphql",
+    "version": "1.0.0",
+    "main": "src/index.ts",
+    "types": "src/index.ts",
+    "scripts": {
+      "build": "tsc"
+    },
+    "dependencies": {
+      "@apollo/client": "^3.8.0",
+      "graphql": "^16.6.0"
+    },
+    "devDependencies": {
+      "typescript": "^5.2.0"
+    }
+  }
+  
