@@ -2,7 +2,7 @@ import { useManualActions } from '../hooks/useManuals';
 import { useImageActions } from '../hooks/useImages'
 import { toast } from '../utils/toast'; // función para mostrar toast
 import { confirmDelete } from '../utils/confirmDelete'; // función para confirmar eliminación
-import { CreateOptions, ImageInput, Manual, ManualInput, ManualUpdateInput } from 'types';
+import { CreateOptions, ManualInput, ManualUpdateInput } from '../types';
 
 export const useManualHandlers = () => {
   const { deleteManual, updateManual, createManual, importManuals } = useManualActions();

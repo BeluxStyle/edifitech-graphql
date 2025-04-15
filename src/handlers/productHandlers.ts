@@ -2,7 +2,7 @@ import { useProductActions } from '../hooks/useProducts';
 import { useImageActions } from '../hooks/useImages'
 import { toast } from '../utils/toast'; // función para mostrar toast
 import { confirmDelete } from '../utils/confirmDelete'; // función para confirmar eliminación
-import { CreateOptions, ImageInput, newProduct, Product, ProductInput } from 'types';
+import { CreateOptions, ImageInput, newProduct, Product, ProductInput } from '../types';
 
 export const useProductHandlers = () => {
   const { deleteProduct, updateProduct, createProduct, importProducts } = useProductActions();

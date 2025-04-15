@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/client';
 
 import { ADD_REACTION, DELETE_COMMENT, POST_COMMENT} from '../graphql/mutations/comments';
-import { CommentInput, ReactionInput } from 'types';
+import { CommentInput, ReactionInput } from '../types';
 
 
 export function useComments() {

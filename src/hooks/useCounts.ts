@@ -1,7 +1,7 @@
 import { useQuery, useMutation } from '@apollo/client';
 import { COUNT_DATA } from '../graphql/queries/counts';
 import { useState } from 'react';
-import { CountData } from 'types';
+import { CountData } from '../types';
 
 
 export function useCounts() {
