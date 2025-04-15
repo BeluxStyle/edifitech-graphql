@@ -46,7 +46,7 @@ export const useManualHandlers = () => {
         name: newManual.name,
         description: newManual.description,
         url: newManual.url,
-        referencias: newManual.referencias
+        productos: newManual.productos
       };
 
       await createManual(input);

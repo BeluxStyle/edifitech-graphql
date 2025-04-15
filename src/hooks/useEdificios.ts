@@ -31,9 +31,9 @@ export function useEdificio(id:string) {
 }
 
 export function useEdificioActions() {
-  const [deleteEdificio] = useMutation(DELETE_EDIFICIO, {refetchQueries: ['GetEdificios','GetComunidades']});
-  const [updateEdificio] = useMutation(UPDATE_EDIFICIO, {refetchQueries: ['GetEdificios','GetComunidades']});
-  const [createEdificio] = useMutation(CREATE_EDIFICIO, {refetchQueries: ['GetEdificios','GetComunidades']});
+  const [deleteEdificio] = useMutation(DELETE_EDIFICIO, {refetchQueries: ['GetEdificios','GetComunidades', 'GetComunidad']});
+  const [updateEdificio] = useMutation(UPDATE_EDIFICIO, {refetchQueries: ['GetEdificios','GetComunidades', 'GetComunidad']});
+  const [createEdificio] = useMutation(CREATE_EDIFICIO, {refetchQueries: ['GetEdificios','GetComunidades', 'GetComunidad']});
   
   return {
     deleteEdificio: (id: string) => deleteEdificio({ variables: { id } }),

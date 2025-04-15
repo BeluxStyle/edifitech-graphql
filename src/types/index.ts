@@ -416,17 +416,21 @@ export interface User {
   }
   
   export interface ManualInput {
-    name: string;
-    url: string;
-    description?: string | null; // Opcional
-    referencias: string;
+    name: string
+    url: string
+    description: string
+    productos: [ProductoInputManual]
+  }
+  
+  export interface ProductoInputManual {
+    id: string
+  }
+  export interface ManualUpdateInput {
+    name: string
+    description: string
+    productos: [ProductoInputManual]
   }
 
-  export interface ManualUpdateInput {
-    name: string;
-    description?: string | null; // Opcional
-    productos: Product[]; // Cambiado a Product[] para reflejar la relación
-  }
   
   export interface DocumentInput {
     url: string;

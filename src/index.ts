@@ -1,4 +1,4 @@
-export * from './apollo/client';
+
 //hooks
 export * from './hooks/useProducts';
 export * from './hooks/useImages'

@@ -22,10 +22,10 @@ export function useManuals(searchTerm: string, paginationModel: { page: number, 
 }
 
 export function useManualActions() {
-  const [deleteManual] = useMutation(DELETE_MANUAL, {refetchQueries: ['GetManuals']});
-  const [updateManual] = useMutation(UPDATE_MANUAL, {refetchQueries: ['GetManuals']});
-  const [createManual] = useMutation(CREATE_MANUAL, {refetchQueries: ['GetManuals']});
-  const [importManuals] = useMutation(IMPORT_MANUALS, {refetchQueries: ['GetManuals']});
+  const [deleteManual] = useMutation(DELETE_MANUAL, {refetchQueries: ['GetManuals','listManuals']});
+  const [updateManual] = useMutation(UPDATE_MANUAL, {refetchQueries: ['GetManuals','listManuals']});
+  const [createManual] = useMutation(CREATE_MANUAL, {refetchQueries: ['GetManuals','listManuals']});
+  const [importManuals] = useMutation(IMPORT_MANUALS, {refetchQueries: ['GetManuals','listManuals']});
   
   return {
     deleteManual: (id: string) => deleteManual({ variables: { id } }),
