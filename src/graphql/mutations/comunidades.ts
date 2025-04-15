@@ -21,3 +21,4 @@ mutation DeleteComunidad($id: ID!) {
   deleteComunidad(id: $id)
 }
 `
+

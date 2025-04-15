@@ -31,4 +31,28 @@ export const REMOVE_USER_FROM_COMPANY = gql`
     }
   }
 }
-`;
+`
+export const ADD_USER_TO_COMPANY = gql`
+mutation AddUserToCompany($userId: ID!, $companyId: ID!) {
+  addUserToCompany(userId: $userId, companyId: $companyId) {
+    id
+    name
+  }
+}`
+
+export const ADD_COMMUNITY_TO_COMPANY = gql`
+mutation AddCommunityToCompany($companyId: ID!, $comunidadId: ID!) {
+  addCommunityToCompany(companyId: $companyId, comunidadId: $comunidadId) {
+    id
+    name
+  }
+}`
+
+export const REMOVE_COMMUNITY_FROM_COMPANY = gql`
+mutation RemoveCommunityFromCompany($companyId: ID!, $comunidadId: ID!) {
+  removeCommunityFromCompany(companyId: $companyId, comunidadId: $comunidadId) {
+    id
+    name
+  }
+}`
+;

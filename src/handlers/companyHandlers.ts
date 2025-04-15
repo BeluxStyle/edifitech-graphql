@@ -4,7 +4,7 @@ import { confirmDelete } from '../utils/confirmDelete'; // función para confirm
 import { CreateOptions, Company, CompanyInput } from '../types';
 
 export const useCompanyHandlers = () => {
-    const { deleteCompany, updateCompany, createCompany, removeUserFromCompany } = useCompanyActions();
+    const { deleteCompany, updateCompany, createCompany, removeUserFromCompany, addUserToCompany, addCommunityToCompany, removeCommunityFromCompany } = useCompanyActions();
 
     const handleDelete = async (id: string) => {
         const confirm = await confirmDelete("Estas seguro de eliminar ésta Empresa?"); // función reusable
@@ -67,6 +67,41 @@ export const useCompanyHandlers = () => {
         }
     };
 
+    const handleAddUser = async (userId: string, companyId: string) => {
+
+        try {
+            await addUserToCompany(userId, companyId);
+            toast('Usuario agregado a la Empresa con éxito', 'success');
+        } catch (err) {
+            toast('Error al agregar usuario a empresa', 'error');
+            console.error(err);
+        }
+    };
+
+    const handleRemoveCommunity = async (comunidadId: string, companyId: string) => {
+        const confirm = await confirmDelete("Estas seguro de eliminar ésta comunidad de la Empresa?"); // función reusable
+        if (!confirm) return;
+
+        try {
+            await removeCommunityFromCompany(comunidadId, companyId);
+            toast('Comunidad eliminada de la Empresa con éxito', 'warning');
+        } catch (err) {
+            toast('Error al eliminar comunidad de empresa', 'error');
+            console.error(err);
+        }
+    };
+
+    const handleAddCommunity = async (comunidadId: string, companyId: string) => {
+
+        try {
+            await addCommunityToCompany(comunidadId, companyId);
+            toast('Comunidad agregada a la Empresa con éxito', 'success');
+        } catch (err) {
+            toast('Error al agregar comunidad a empresa', 'error');
+            console.error(err);
+        }
+    };
+
 
 
     return {
@@ -74,5 +109,8 @@ export const useCompanyHandlers = () => {
         handleUpdate,
         handleCreate,
         handleRemoveUser,
+        handleAddUser,
+        handleAddCommunity,
+        handleRemoveCommunity
     };
 };
