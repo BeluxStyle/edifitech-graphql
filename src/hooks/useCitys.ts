@@ -1,9 +1,13 @@
 import axios from 'axios';
 
+interface ZipResponse {
+  places: { 'place name': string }[];
+}
+
 export async function getCity(cp: string): Promise<string | null> {
     try {
       const response = await axios.get(`https://api.zippopotam.us/es/${cp}`);
-      const places = response.data.places;
+      const places = (response.data as ZipResponse).places;
       
   
       // Verifica si hay lugares en la respuesta y devuelve el "place name"
