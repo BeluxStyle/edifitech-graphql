@@ -5,6 +5,7 @@ query GetEdificios {
   listEdificios {
     id
     name
+    label
     direccion
     cp
     comunidad {
@@ -28,6 +29,7 @@ query GetEdificio($id: ID!) {
   getEdificio(id: $id) {
     id
     name
+    label
     direccion
     cp
     createdAt
