@@ -34,7 +34,7 @@ export function useMe() {
 
 export function useDevice() {
   
-  const { data, loading, error, refetch } = useQuery(GET_ME, {fetchPolicy: "cache-and-network"
+  const { data, loading, error, refetch } = useQuery(GET_MY_DEVICES, {fetchPolicy: "cache-and-network"
   });
 
   return {
