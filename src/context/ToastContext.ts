@@ -1,5 +1,5 @@
-// edifitech-graphql/src/context/ToastContext.ts
 
+'use client'
 import { createContext, useContext } from 'react'
 
 type ToastContextType = {
