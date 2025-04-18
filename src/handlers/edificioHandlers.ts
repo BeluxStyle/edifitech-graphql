@@ -39,8 +39,7 @@ export const useEdificioHandlers = () => {
   
     const handleCreate = async ( newEdificio: EdificioInput, {onSuccess, onError }: CreateOptions) => {
       try {
-        
-
+      
         const result = await createEdificio(newEdificio);
   
         toast("Edificio creado correctamente","success");

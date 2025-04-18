@@ -1,18 +1,5 @@
 // types.ts
 
-import { DefaultSession } from "next-auth";
-
-declare module "next-auth" {
-  interface User {
-    role?: {
-      level: number;
-    };
-  }
-
-  interface Session {
-    user?: User & DefaultSession["user"];
-  }
-}
 
 export interface User {
     id: string;
@@ -195,12 +182,12 @@ export interface User {
 
   export interface newProduct {
     ref: string;
-    ean?: string | null;
+    ean?: string;
     price: number;
-    descripcion?: string | null;
-    subcategoryId?: string | null;
-    brandId?: string | null;
-    imageUrl?: string | null;
+    descripcion?: string;
+    subcategoryId?: string;
+    brandId?: string;
+    imageUrl?: string;
   }
   
   export interface Subscription {
