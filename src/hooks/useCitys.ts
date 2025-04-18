@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export async function getCity(cp: string): Promise<string | null> {
     try {
       const response = await axios.get(`https://api.zippopotam.us/es/${cp}`);
