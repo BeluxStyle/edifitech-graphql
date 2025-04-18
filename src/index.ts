@@ -18,6 +18,7 @@ export * from './hooks/useElementos'
 export * from './hooks/useManuals'
 export * from './hooks/useDocuments'
 export * from './hooks/useCounts'
+export * from './hooks/useCitys'
 //handlers
 export * from './handlers/imageHandlers'
 export * from './handlers/productHandlers';
