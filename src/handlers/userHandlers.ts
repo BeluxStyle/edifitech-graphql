@@ -1,10 +1,10 @@
 import { useUserActions } from '../hooks/useUsers';
 import { toast } from '../utils/toast'; // función para mostrar toast
 import { confirmDelete } from '../utils/confirmDelete'; // función para confirmar eliminación
-import { CreateOptions, User, UserInput } from '../types';
+import { CreateOptions, RegisterDeviceInput, User, UserInput } from '../types';
 
 export const useUserHandlers = () => {
-    const { deleteUser, updateUser, createUser, changePassword, checkPassword } = useUserActions();
+    const { deleteUser, updateUser, createUser, changePassword, checkPassword, registerDevice, unregisterDevice } = useUserActions();
   
     const handleDelete = async (id: string) => {
       const confirm = await confirmDelete("Estas seguro de eliminar éste Usuario?"); // función reusable
@@ -80,6 +80,30 @@ export const useUserHandlers = () => {
       }
     }
 
+    const handleRegisterDevice = async (input: RegisterDeviceInput) => {
+      try {
+        const res = await registerDevice(input);
+        toast('Dispositivo registrado correctamente', 'success');
+        return res;
+      } catch (error) {
+        toast('Error registrando dispositivo', 'error');
+        throw error;
+      }
+    };
+    
+    const handleUnregisterDevice = async (id: string) => {
+      const confirm = await confirmDelete("Estas seguro de eliminar éste Dispositivo?"); // función reusable
+      if (!confirm) return;
+      try {
+        const res = await unregisterDevice(id);
+        toast('Dispositivo eliminado correctamente', 'success');
+        return res;
+      } catch (error) {
+        toast('Error eliminando dispositivo', "error");
+        throw error;
+      }
+    };
+
 
   
     
@@ -89,6 +113,8 @@ export const useUserHandlers = () => {
       handleUpdate,
       handleCreate,
       handleChangePassword,
-      handlePassword
+      handlePassword,
+      handleRegisterDevice,
+      handleUnregisterDevice
     };
   };

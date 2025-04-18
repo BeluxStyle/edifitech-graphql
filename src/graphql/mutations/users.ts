@@ -45,3 +45,20 @@ export const CHECK_PASSWORD = gql`
 }
 `
 
+export const REGISTER_DEVICE = gql`
+mutation RegisterDevice($input: RegisterDeviceInput!) {
+  registerDevice(input: $input) {
+    id
+    os
+    expoPushToken
+    deviceId
+  }
+}
+`;
+
+export const UNREGISTER_DEVICE = gql`
+mutation UnregisterDevice($deviceId: String!) {
+  unregisterDevice(deviceId: $deviceId)
+}
+`;
+

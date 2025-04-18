@@ -81,3 +81,17 @@ export const GET_ME = gql`
     }
   }
 `;
+
+export const GET_MY_DEVICES = gql`
+query GetMyDevices {
+  myDevices {
+    id
+    expoPushToken
+    os
+    deviceId
+    createdAt
+    updatedAt
+    lastUsedAt
+  }
+}
+`;

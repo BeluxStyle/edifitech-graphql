@@ -448,3 +448,19 @@ export interface User {
     link: string
   }
   
+  export interface RegisterDeviceInput {
+    expoPushToken: string
+    os: string
+    deviceId: string
+  }
+
+  export interface UserDevice {
+    id: string
+    userId: string
+    expoPushToken: string
+    os: string
+    deviceId: string
+    createdAt: Date
+    updatedAt: Date
+    lastUsedAt: Date
+  }
