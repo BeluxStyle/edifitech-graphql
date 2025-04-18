@@ -16,3 +16,5 @@ export async function getCity(cp: string): Promise<string | null> {
       throw error.response?.data || 'Error al obtener el nombre del lugar';
     }
   };
+
+  
