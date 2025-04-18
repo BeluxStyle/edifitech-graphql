@@ -1,7 +1,7 @@
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_USERS, GET_ME, GET_MY_DEVICES } from '../graphql/queries/users';
 import { DELETE_USER, UPDATE_USER, CREATE_USER, CHANGE_PASSWORD, CHECK_PASSWORD, REGISTER_DEVICE, UNREGISTER_DEVICE } from '../graphql/mutations/users';
-import { RegisterDeviceInput } from 'types';
+import { RegisterDeviceInput } from '../types';
 
 
 export function useUsers() {
