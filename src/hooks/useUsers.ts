@@ -3,6 +3,7 @@ import { GET_USERS, GET_ME, GET_MY_DEVICES } from '../graphql/queries/users';
 import { DELETE_USER, UPDATE_USER, CREATE_USER, CHANGE_PASSWORD, CHECK_PASSWORD, REGISTER_DEVICE, UNREGISTER_DEVICE } from '../graphql/mutations/users';
 import { RegisterDeviceInput } from 'types';
 
+
 export function useUsers() {
   
   const { data, loading, error, refetch } = useQuery(GET_USERS, {fetchPolicy: "cache-and-network"
