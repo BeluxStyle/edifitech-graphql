@@ -52,8 +52,8 @@ export function useUserActions() {
   const [createUser] = useMutation(CREATE_USER, {refetchQueries: ['GetUsers','GetMe']});
   const [changePassword] = useMutation(CHANGE_PASSWORD, {refetchQueries: ['GetUsers','GetMe']});
   const [checkPassword] = useMutation(CHECK_PASSWORD, {refetchQueries: ['GetUsers','GetMe']});
-  const [registerDevice] = useMutation(REGISTER_DEVICE, {refetchQueries: ['GetUsers','GetMe', 'GetMyDevices']})
-  const [unregisterDevice] = useMutation(UNREGISTER_DEVICE, {refetchQueries: ['GetUsers','GetMe', 'GetMyDevices']})
+  const [registerDevice] = useMutation(REGISTER_DEVICE, {refetchQueries: ['GetMyDevices']})
+  const [unregisterDevice] = useMutation(UNREGISTER_DEVICE, {refetchQueries: ['GetMyDevices']})
   
 
   
