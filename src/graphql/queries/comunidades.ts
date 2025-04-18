@@ -14,6 +14,7 @@ query GetComunidades {
     edificios {
       id
       name
+      label
       adminCompany {
         id
         name
@@ -71,6 +72,7 @@ query GetComunidad($id: ID!) {
     edificios {
       id
       name
+      label
       instalaciones {
         id
         tipo

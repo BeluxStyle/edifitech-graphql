@@ -370,6 +370,15 @@ export interface User {
     cantidad?: number | null; // Opcional
   }
 
+  export interface Elemento {
+    id: string;
+    producto: Product;
+    estado: string;
+    cantidad: number;
+    createdAt: Date;
+    updatedAt: Date;
+  }
+
   export interface CreateOptions {
     onSuccess?: () => void;
     onError?: () => void;
