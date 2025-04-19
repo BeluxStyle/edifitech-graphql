@@ -73,6 +73,9 @@ query GetComunidad($id: ID!) {
       id
       name
       label
+      comments {
+        id
+      }
       instalaciones {
         id
         tipo
