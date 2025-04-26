@@ -8,6 +8,7 @@ query GetEdificios {
     label
     direccion
     cp
+    city
     comunidad {
       id
       name
@@ -32,6 +33,7 @@ query GetEdificio($id: ID!) {
     label
     direccion
     cp
+    city
     createdAt
     contactos {
       id

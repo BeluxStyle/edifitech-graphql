@@ -7,6 +7,7 @@ query GetComunidades {
     name
     direccion
     cp
+    city
     adminCompany {
       id
       name
@@ -30,6 +31,7 @@ query GetComunidad($id: ID!) {
     direccion
     createdAt
     cp
+    city
     name
     contactos {
       id

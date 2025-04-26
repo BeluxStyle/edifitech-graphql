@@ -19,6 +19,20 @@ export const GET_USERS = gql`
         id
         provider
       }
+      userDevices {
+        id
+        expoPushToken
+        os
+        deviceId
+        createdAt
+        updatedAt
+        lastUsedAt
+      }
+      company {
+        id
+        name
+        cif
+      }
       userSubscriptions {
         id
         endDate
