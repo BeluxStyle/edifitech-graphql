@@ -22,7 +22,7 @@ export const useUserHandlers = () => {
     const handleUpdate = async (user: User) => {
       
       try {
-        await updateUser(user.id, user.name, user.email, user.role?.id);
+        await updateUser(user.id, user.name, user.image ?? '', user.email, user.role?.id);
         toast('Usuario actualizado', 'success');
         return user; // Retorna el usero actualizado
       } catch (err) {

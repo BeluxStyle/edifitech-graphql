@@ -60,7 +60,7 @@ export function useUserActions() {
   
   return {
     deleteUser: (id: string) => deleteUser({ variables: { id } }),
-    updateUser: (id: string, name: string, email: string, roleId: string) => updateUser({ variables: { id, name, email, roleId } }),
+    updateUser: (id: string, name: string, image: string, email: string, roleId: string) => updateUser({ variables: { id, name, image, email, roleId } }),
     createUser: (name: string, email: string, password: string) => createUser({ variables: { name, email, password } }),
     changePassword: (id: string, password: string) => changePassword({ variables: { id, password } }),
     checkPassword: (id: string, password:string) => checkPassword({ variables: { id, password } }),
