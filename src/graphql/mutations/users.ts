@@ -3,8 +3,8 @@ import { gql } from '@apollo/client';
 
 
 export const UPDATE_USER = gql`
-  mutation UpdateUser($id: ID!, $name: String, $email: String, $roleId: ID) {
-    updateUser(id: $id, name: $name, email: $email, roleId: $roleId) {
+  mutation UpdateUser($id: ID!, $name: String, $image: String, $email: String, $roleId: ID) {
+    updateUser(id: $id, name: $name, image: $image email: $email, roleId: $roleId) {
       id
     }
   }
